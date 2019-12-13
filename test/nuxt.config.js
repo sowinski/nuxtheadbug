@@ -22,6 +22,9 @@ export default {
   /*
   ** Global CSS
   */
+  router: {
+    middleware: 'gtm'
+  },
   css: [
   ],
   /*
