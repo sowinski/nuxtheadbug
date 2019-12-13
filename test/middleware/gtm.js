@@ -1,7 +1,9 @@
-import gtmAddheadcode from '~/src/googletagmanager.js'
-
 export default function({ app }) {
   if (process.server) {
-    gtmAddheadcode(app.head, 'test')
+    app.head.script.push({
+      hid: 'gtag',
+      src: '//www.googletagmanager.com/gtm.js',
+      async: true
+    })
   }
 }
